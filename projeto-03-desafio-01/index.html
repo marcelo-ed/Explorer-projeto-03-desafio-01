@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentoria</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+        <div class="gray-background"></div>
+        <header>
+            <h1>MENTORIA</h1>
+            <p>Preencha o formulário abaixo para agendar sua mentoria</p>
+        </header>
+
+        <form id="mentoring-form">
+            <fieldset>
+                <legend class="primary-legend">INFORMAÇÕES PESSOAIS</legend>
+
+                <div class="name">
+                    <div class="input-wrapper">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="input-wrapper">
+                    <label for="surname">Sobrenome</label>
+                    <input type="text" id="surname">
+                </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="email">E-mail <span>(insira um E-mail válido)</span></label>
+                    <input type="email" id="email">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="password">Senha <span>(mínimo de 8 caracteres)</span></label>
+                    <input type="password" id="password">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend class="primary-legend">INFORMAÇÕES DO MENTOR</legend>
+
+                <div class="input-wrapper">
+                    <label for="mentor-name">Nome do seu mentor <span>(só o primeiro nome)</span></label>
+                    <input type="text" id="mentor-name">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend class="primary-legend">SEUS HORÁRIOS DISPONÍVEIS</legend>
+
+                <fieldset>
+                    <legend class="secundary-legend">PRIMEIRA MENTORIA</legend>
+                    
+                    <!--Fiquei uns 2 dias tentando tirar os ícones e placeholders padrão dos inputs tipo time e date. Consegui tirar os ícones com um webkit, mas aparentemente esses tipos de input não possuem suporte para placeholder, por isso alterei para text.-->
+
+                    <div class="date">
+                        <div class="input-wrapper">
+                        <label for="first-mentoring-date" >Data <span>(DD/MM/AAA)</span></label>
+                        <input type="text" class="day" id="first-mentoring-date">
+                    </div>
+                    <div class="hour">
+                        <div class="input-wrapper">
+                            <label for="first-mentoring-begin" >Das</label>
+                            <input type="text" class="hour" id="first-mentoring-begin">
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="first-mentoring-end" class="hour">Até</label>
+                            <input type="text" class="hour" id="first-mentoring-end">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend class="secundary-legend">SEGUNDA MENTORIA</legend>
+
+                    <div class="date">
+
+                        <div class="input-wrapper">
+                            <label for="second-mentoring-date">Data <span>(DD/MM/AAA)</span></label>
+                            <input type="text" class="day">
+                        </div>
+
+                        <div class="hour">
+                            <div class="input-wrapper">
+                                <label for="second-mentoring-begin" >Das</label>
+                                <input type="text" class="hour" id="second-mentoring-begin">
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="second-mentoring-end" >Até</label>
+                                <input type="text" id="second-mentoring-end" class="hour" placeholder=" ">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </fieldset>
+        </form>
+        <footer>
+            <button form="mentoring-form">SALVAR</button>
+        </footer>
+    </div>
+</body>
+</html>
